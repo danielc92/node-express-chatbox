@@ -18,3 +18,19 @@ const server = app.listen(3001, ()=>console.log('Listening to requests on port 3
 
 // Listens for client connections
 const io = socket(server);
+
+// Handle incoming signals and emit
+io.on('connection', (socket) => {
+
+    io.sockets.emit('system', { name: 'System', id :socket.id})
+
+    socket.on('chat-message', (data) => {
+        io.sockets.emit('chat-message', data)
+    })
+
+    socket.on('name-change', (data) => {
+        io.sockets.emit('name-change', data)
+    })
+
+
+})
