@@ -21,3 +21,10 @@ var name_input = document.getElementById('input-name');
 var chatbox = document.getElementById('chatbox');
 var system = document.getElementById('system-panel');
 var name = "Anonymous";
+
+function renderUser() {
+    current_id.innerText = socket_id;
+    current_username.innerText = name;
+}
+
+renderUser();
