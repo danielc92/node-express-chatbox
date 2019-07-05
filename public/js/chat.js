@@ -73,3 +73,10 @@ btn_message.addEventListener('click', ()=> {
 function adjustScrollHeight (object) {
     object.scrollTop = object.scrollHeight;
 }
+
+function returnTimestamp () {
+    let date = Date().toLocaleString()
+    let split = date.split(' (');
+    let final = split[0];
+    return final
+}
