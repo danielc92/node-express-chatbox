@@ -49,3 +49,21 @@ btn_name.addEventListener('click', ()=>{
         id: socket_id
     })
 })
+
+
+// Emitting messages
+btn_message.addEventListener('click', ()=> {
+    let message = message_input.value;
+
+    if (message.length > 0) {
+        let data = {
+            message: message,
+            timestamp: new Date().toISOString(),
+            name: name,
+            id: socket.id
+        }
+    
+        socket.emit('chat-message', data)
+    } 
+    message_input.value = '';
+})
