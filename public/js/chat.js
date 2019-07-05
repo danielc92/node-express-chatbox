@@ -28,3 +28,24 @@ function renderUser() {
 }
 
 renderUser();
+
+
+// Setting the username
+btn_name.addEventListener('click', ()=>{
+    let previousName = name;
+    let name_entered = name_input.value;
+    console.log(name_entered)
+    if (name_entered.length > 0) {
+        name = name_entered;
+        name_input.value = '';
+    }
+
+    
+
+    // Emit the new name
+    socket.emit('name-change', {
+        previousName,
+        newName: name,
+        id: socket_id
+    })
+})
