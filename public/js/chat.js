@@ -67,3 +67,9 @@ btn_message.addEventListener('click', ()=> {
     } 
     message_input.value = '';
 })
+
+
+// Auto 
+function adjustScrollHeight (object) {
+    object.scrollTop = object.scrollHeight;
+}
