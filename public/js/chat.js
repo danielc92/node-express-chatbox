@@ -1,5 +1,14 @@
 console.log('If you are seeing this message, the chat.js has been included successfully.')
 
+const nameParts_1 = ['Happy', 'Sad', 'Grumpy', 'Excited', 'Ambitious', 'Polite', 'Scruffy', 'Elegant', 'Dazzling'];
+const nameParts_2 = ['Blue', 'Orange', 'Yellow', 'Purple', 'Black', 'White', 'Green', 'Red'];
+const nameParts_3 = ['Horse', 'Seahorse', 'Dog', 'Cat', 'Tiger', 'Shark', 'Monkey', 'Worm', 'Butterfly', 'Eagle'];
+
+function randFromArray(array) {
+    let index = Math.floor(Math.random() * array.length);
+    return array[index]
+}
+
 var current_id = document.getElementById('current-id');
 var current_username = document.getElementById('current-username');
 
@@ -20,7 +29,7 @@ var message_input = document.getElementById('input-message');
 var name_input = document.getElementById('input-name');
 var chatbox = document.getElementById('chatbox');
 var system = document.getElementById('system-panel');
-var name = "Anonymous";
+var name = randFromArray(nameParts_1) + randFromArray(nameParts_2) + randFromArray(nameParts_3);
 
 function renderUser() {
     current_id.innerText = socket_id;
