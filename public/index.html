@@ -15,7 +15,57 @@
     <section class="section">
         <section class="container">
             <section class="columns">
+                    <section class="column">
+                            <section class="content">
+                                <div id="chatbox">
+                                        <h5>Chat</h5>
+                                        <hr>
+                                </div>                               
+                            </section>
+    
+                            <section class="content">
+                                    <div class="field has-addons">
+                                            <p class="control is-expanded">
+                                                <input id="input-message" class="input" type="text" placeholder="Type a message...">
+                                            </p>
+                                            <p class="control">
+                                                <a id="send-message" class="button is-outlined">
+                                                    <span class="icon">
+                                                        <i class="fas fa-paper-plane"></i>
+                                                    </span>     
+                                                </a>
+                                            </p>
+                                        </div>
+                        
+                                        <div class="field has-addons">
+                                            <p class="control is-expanded">
+                                                <input id="input-name" class="input" type="text" placeholder="Change name...">
+                                            </p>
+                                            <p class="control">
+                                                <a id="set-name" class="button is-outlined">
+                                                <span class="icon is-small">
+                                                        <i class="fas fa-user-alt"></i>
+                                                </span>
+                                        
+                                                </a>
+                                            </p>
+                                        </div> 
+                            </section>
+                    </section>
 
+                    <section class="column is-3">
+                            <section class="content">
+                                <h5>User details</h5>
+                                <hr>
+                                <p class="help">session id: <span id="current-id" class="id-text"></span></p>
+                                <p class="help">name: <span id="current-username" class="name-text"></span></p>
+                            </section>
+                            <section class="content">
+                                <h5>System</h5>
+                                <hr>
+                                <div id="system-panel"></div>
+                            </section>
+                        </section>
             </section>
         </section>
     </section>
