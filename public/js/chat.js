@@ -11,3 +11,13 @@ socket.on('connect', ()=> {
     current_id.innerText = socket_id;
 })
 console.log(socket_id)
+
+
+// Grab elements
+var btn_message = document.getElementById('send-message');
+var btn_name = document.getElementById('set-name');
+var message_input = document.getElementById('input-message');
+var name_input = document.getElementById('input-name');
+var chatbox = document.getElementById('chatbox');
+var system = document.getElementById('system-panel');
+var name = "Anonymous";
