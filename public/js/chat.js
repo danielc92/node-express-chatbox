@@ -80,3 +80,12 @@ function returnTimestamp () {
     let final = split[0];
     return final
 }
+
+
+socket.on('chat-message', (data)=>{
+    let alignClass = (socket.id === data.id) ?  'has-text-right' : '';
+    chatbox.innerHTML += 
+    `<div class="notification is-white fade-in ${alignClass}">
+        <p><strong>${data.name}</strong>: ${data.message}<br><span class="help has-text-grey">${returnTimestamp()}</span></p></div>`
+    adjustScrollHeight(chatbox);
+})
