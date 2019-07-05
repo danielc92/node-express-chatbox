@@ -96,3 +96,11 @@ socket.on('name-change', (data) => {
                          </div>`
     adjustScrollHeight(system);
 })
+
+socket.on('system', (data) => {
+    system.innerHTML += `<div class="notification is-white fade-in">
+                            <p class="system-text help"><span class="id-text">${data.id}</span> has joined the chat.</p>
+                        </div>`
+    adjustScrollHeight(system);
+})
+
