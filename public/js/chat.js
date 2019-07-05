@@ -89,3 +89,10 @@ socket.on('chat-message', (data)=>{
         <p><strong>${data.name}</strong>: ${data.message}<br><span class="help has-text-grey">${returnTimestamp()}</span></p></div>`
     adjustScrollHeight(chatbox);
 })
+
+socket.on('name-change', (data) => {
+    system.innerHTML += `<div class="notification is-white fade-in">
+                            <p class="system-text help">${data.id} changed name from <span class="name-text">${data.previousName}</span> to <span class="name-text">${data.newName}</span></p>
+                         </div>`
+    adjustScrollHeight(system);
+})
