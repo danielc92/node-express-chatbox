@@ -31,6 +31,4 @@ io.on('connection', (socket) => {
     socket.on('name-change', (data) => {
         io.sockets.emit('name-change', data)
     })
-
-
 })

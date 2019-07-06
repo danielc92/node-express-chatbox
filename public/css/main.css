@@ -9,9 +9,16 @@ body {
   }
   
   hr {
-    margin: .9rem 0;
+    margin: .7rem 0 !important;
+    height: 1px;
   }
   
+
+  h5 {
+    color: rgb(27.7%, 27.7%, 27.7%) !important;
+    margin-bottom: 0.2rem !important;
+  }
+
   .id-text {
     color: #8b14cc;
     font-weight: bold;
@@ -23,11 +30,34 @@ body {
   }
   
   #chatbox {
-    padding: 0.5rem; height: 50vh; overflow-y: auto;
+    padding: 0.5rem; 
+    height: 50vh;
+  }
+
+
+  .scrollable {
+    overflow-y: auto;
+  }
+
+  .scrollable::-webkit-scrollbar-track
+  {
+    background-color: #F5F5F5;
   }
   
+  .scrollable::-webkit-scrollbar
+  {
+    width: 6px;
+    background-color: rgba(245, 245, 245, 0.795);
+  }
+  
+  .scrollable::-webkit-scrollbar-thumb
+  {
+    background-color: #747272;
+  }
+  
+  
   #system-panel {
-    padding: 0.5rem; height: 30vh; overflow-y: auto;
+    padding: 0.5rem; height: 30vh;
   }
   
   .system-text {
