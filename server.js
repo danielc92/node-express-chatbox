@@ -22,12 +22,15 @@ const io = socket(server);
 // Handle incoming signals and emit
 io.on('connection', (socket) => {
 
+    // Broadcast system message once a user has established connection
     io.sockets.emit('system', { name: 'System', id :socket.id})
 
+    // Listen for chat-message from client, broadcast to everyone once received
     socket.on('chat-message', (data) => {
         io.sockets.emit('chat-message', data)
     })
 
+    // Listen for name-change from client, broadcast to everyone once received
     socket.on('name-change', (data) => {
         io.sockets.emit('name-change', data)
     })
